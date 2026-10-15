@@ -35,7 +35,7 @@ flowchart TB
 
 ## Product interfaces — sanitized visual walkthrough
 
-The images below are **independently authored vector mockups** inspired by the product's information architecture. They show entirely invented metrics, identifiers and abstract geography. These are not production screenshots.
+The images below are **sanitized, AI-assisted visual mockups** inspired by the product's interface and information architecture. Metrics, identifiers and geography are fictional; these are not production screenshots. The iOS image is a **design concept only**, not evidence of a tested or released iOS application.
 
 
 ### Web Dashboard
@@ -58,7 +58,7 @@ The images below are **independently authored vector mockups** inspired by the p
        alt="REP-Monitor iOS - Visual Concept">
 </p>
 
-> All screenshots use fictional data.
+> **Portfolio mockups:** All images use fictional data. The iOS interface is a visual proposal, not a released app.
 
 [Explore the interactive portfolio demonstration →](https://walacevicente-cotokas.github.io/rep-monitor-case-study/demo/)
 
@@ -94,7 +94,7 @@ Explore the [interactive synthetic demo on GitHub Pages](https://walacevicente-c
 - [Example: parameterized status aggregation (SQL)](examples/status_summary.sql)
 - [Data protection and publication policy](SECURITY.md)
 
-Screenshots and a short product walkthrough can be added **only after replacing live records, addresses, maps, and account information with mock data**.
+The portfolio images shown above use fictional records and do not contain production account, device or customer data.
 
 ## My contribution and scope
 
