@@ -33,6 +33,30 @@ flowchart TB
 
 *Illustrative architecture, deliberately omitting internal network details, hosts and credentials.*
 
+## Product interfaces — sanitized visual walkthrough
+
+The images below are **independently authored vector mockups** inspired by the product's information architecture. They show entirely invented metrics, identifiers and abstract geography. These are not production screenshots.
+
+### Web operations portal
+
+![Sanitized REP-Monitor web dashboard](assets/screenshots/web-dashboard.svg)
+
+Dashboard concepts: collection-health indicators, operational map and recent revalidation.
+
+### Android field application
+
+<p align="center"><img src="assets/screenshots/android-home.svg" width="320" alt="Illustrative REP-Monitor Android screen with fictional equipment metrics" /></p>
+
+Field-first interface focused on priority alerts, device lookup, mapping and revalidation.
+
+### iOS — proposed adaptation, not released
+
+<p align="center"><img src="assets/screenshots/ios-concept.svg" width="320" alt="Conceptual and unreleased iOS interface mockup using synthetic data" /></p>
+
+**iOS is a visual concept only:** this portfolio does not imply a shipped, tested or App Store-published iOS product.
+
+[Explore the interactive portfolio demonstration →](https://walacevicente-cotokas.github.io/rep-monitor-case-study/demo/)
+
 ## What was built
 
 | Area | Capabilities | Engineering evidence |
