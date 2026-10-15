@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>REP-Monitor — Synthetic Product Walkthrough</title>
+<style>
+:root{font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;color:#17243a;background:#f3f6fa}*{box-sizing:border-box}body{margin:0}
+header{background:#10223e;color:#fff;padding:24px max(22px,calc((100vw - 1120px)/2));display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+header h1{margin:0;font-size:25px;letter-spacing:-.7px}header p{margin:5px 0 0;color:#b8cce5;font-size:13px}
+.tag{padding:7px 11px;border:1px solid #557397;border-radius:20px;font-size:12px;color:#e6f0ff}
+main{max-width:1120px;margin:auto;padding:30px 18px 70px}.notice{border:1px solid #d8e4f1;border-radius:12px;padding:13px 17px;background:#eaf2fb;color:#405779;font-size:13px}
+nav{display:flex;gap:10px;margin:24px 0;flex-wrap:wrap}button{cursor:pointer;border:1px solid #cdd9e7;background:white;color:#233d60;border-radius:9px;padding:10px 15px;font-weight:650}button.active,button:hover{background:#1956a6;color:white;border-color:#1956a6}button:focus-visible,input:focus-visible{outline:3px solid #ffbc58}
+.panel{display:none}.panel.active{display:block}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.stat,.card{background:#fff;border-radius:14px;border:1px solid #e0e7ef;padding:20px;box-shadow:0 3px 14px rgba(30,48,70,.035)}.stat strong{display:block;font-size:29px;letter-spacing:-1.1px}.stat span{font-size:13px;color:#6c7d91}.stat small{display:block;margin-top:8px;color:#7b8a9c}
+h2{font-size:22px;margin:23px 0 13px}h3{margin:0 0 12px;font-size:17px}.two{display:grid;grid-template-columns:1.6fr 1fr;gap:16px;margin-top:15px}
+.bar{height:14px;background:#e7edf4;border-radius:20px;overflow:hidden;margin:13px 0}.bar i{display:block;height:100%;background:#278568;width:77%;border-radius:20px}.legend{font-size:13px;color:#64758b}
+label{display:block;font-weight:700;font-size:13px;margin-bottom:7px}input{width:100%;padding:12px;border:1px solid #cbd6e4;border-radius:9px;font-size:15px}
+table{width:100%;border-collapse:collapse}th,td{padding:13px 9px;text-align:left;border-bottom:1px solid #e7ecf2;font-size:13px}th{color:#708096;font-weight:650}.status{font-weight:700;border-radius:24px;padding:5px 8px;white-space:nowrap;font-size:11px}.ok{background:#e1f5ec;color:#126347}.warn{background:#fff2d7;color:#865700}.bad{background:#fee7e8;color:#a62b33}
+.map{height:330px;position:relative;overflow:hidden;border-radius:12px;background:repeating-linear-gradient(28deg,#e8eef5 0 30px,#dbe6ef 30px 38px,#edf2f7 38px 76px);border:1px solid #d6e1ea}
+.map:before,.map:after{content:"";position:absolute;width:130%;height:22px;background:#fff;border:1px solid #d9e0e8;transform:rotate(-27deg);left:-10%;top:45%}.map:after{transform:rotate(46deg);top:72%;height:15px}
+.pin{position:absolute;z-index:2;display:flex;align-items:center;justify-content:center;border:4px solid #fff;border-radius:50%;box-shadow:0 2px 9px #789;min-width:40px;height:40px;color:white;font-weight:800;background:#d9444c}.pin.blue{background:#287ce3}.pin.yellow{background:#e4a526}
+.p1{left:20%;top:21%}.p2{left:61%;top:47%}.p3{left:73%;top:15%}.p4{left:37%;top:70%}
+aside{color:#6c7b8c;font-size:13px;line-height:1.6}.foot{margin-top:30px;text-align:center;color:#7b8ca2;font-size:12px}
+@media(max-width:750px){.grid{grid-template-columns:repeat(2,1fr)}.two{grid-template-columns:1fr}.card{overflow-x:auto}th,td{white-space:nowrap}}
+</style></head>
+<body><header><div><h1>◉ REP-Monitor</h1><p>Enterprise Fleet Monitoring · Product Case Study</p></div><div class="tag">DEMO · SYNTHETIC DATA ONLY</div></header>
+<main><div class="notice"><strong>Public portfolio prototype.</strong> This stand-alone interface is an original illustrative mockup. All identifiers, locations, records, figures and interactions are fictional; it does not connect to the employer's system or production API.</div>
+<nav aria-label="Demo sections"><button class="active" data-tab="overview">Overview</button><button data-tab="equipment">Equipment search</button><button data-tab="locations">Problem locations</button><button data-tab="workflow">Workflow & decisions</button></nav>
+<section id="overview" class="panel active"><h2>Operational overview</h2><div class="grid">
+<div class="stat"><span>Demo equipment</span><strong>1,240</strong><small>Fictional scenario</small></div>
+<div class="stat"><span>Collecting</span><strong>957</strong><small>77.2% of demo fleet</small></div>
+<div class="stat"><span>Not collecting</span><strong>216</strong><small>Needs review</small></div>
+<div class="stat"><span>Recovered / 7 days</span><strong>67</strong><small>Illustrative metric</small></div></div>
+<div class="two"><div class="card"><h3>Collection health</h3><div class="bar"><i></i></div><div class="legend">77.2% collecting · 22.8% other states (sample only)</div><h3 style="margin-top:28px">Why it matters</h3><p>Reconcile expected inventory with observed telemetry and surface actionable problems to technicians, rather than making them search through disconnected tools.</p></div><div class="card"><h3>Engineering focus</h3><p>Field-oriented navigation, clear collection status, single-device revalidation and a separation between mobile/web clients, API and data workflows.</p><aside>See the repository's architecture and decision documents for implementation context and trade-offs.</aside></div></div></section>
+<section id="equipment" class="panel"><h2>Equipment search</h2><div class="card"><label for="q">Search fictional ID, model or location</label><input id="q" placeholder="Example: DEMO-102"><div style="overflow-x:auto"><table><thead><tr><th>Asset</th><th>Model</th><th>Location</th><th>Last seen</th><th>Status</th></tr></thead><tbody id="rows"></tbody></table></div><p id="empty" hidden>No sample equipment matched.</p></div><aside>Filtering is local JavaScript over six invented sample records. No login, network request, actual serial or database access.</aside></section>
+<section id="locations" class="panel"><h2>Problem locations (illustrative)</h2><div class="two"><div class="card"><div class="map" role="img" aria-label="Abstract non-geographic background with four fictional markers"><div class="pin blue p1" title="Fictional technician">●</div><div class="pin p2" title="Two demo problems">2</div><div class="pin yellow p3" title="One demo problem">1</div><div class="pin p4" title="Three demo problems">3</div></div></div><div class="card"><h3>Map behavior</h3><p>Real product concept: prioritize nearby problematic locations and cluster markers to reduce visual overload on mobile.</p><p><strong>This map is intentionally not geographical.</strong> It uses no GPS, real customer location or third-party map service.</p><aside>A production map would require authenticated API responses and a proper mapping/geocoding stack.</aside></div></div></section>
+<section id="workflow" class="panel"><h2>From signal to action</h2><div class="two"><div class="card"><h3>Field service workflow</h3><ol><li>Look up asset by REP or serial.</li><li>Check current collection status and the latest observation.</li><li>Confirm customer/location context.</li><li>Request revalidation using an authorized backend operation.</li><li>Review the refreshed state.</li></ol><p><strong>Note:</strong> This public demo does not send real revalidation requests.</p></div><div class="card"><h3>Technical decisions</h3><ul><li>Separate ERP records from monitoring telemetry.</li><li>Review imports to avoid accidental reactivation.</li><li>Preserve selected state transitions for historical analysis.</li><li>Limit the field map to relevant problem locations.</li><li>Enforce authorization at the API boundary.</li></ul></div></div></section>
+<div class="foot">Portfolio demonstration · Original mockup · No real data or production connection · <a href="../README.md">Back to case study</a></div></main>
+<script>
+const records=[
+{id:"DEMO-101",model:"Multifunction A",place:"Sample Branch North",last:"2 hours ago",status:"Collecting"},
+{id:"DEMO-102",model:"Printer B",place:"Sample Branch East",last:"9 days ago",status:"Stopped"},
+{id:"DEMO-103",model:"Multifunction C",place:"Sample Branch South",last:"5 hours ago",status:"Collecting"},
+{id:"DEMO-104",model:"Printer D",place:"Sample Branch West",last:"12 days ago",status:"Stopped"},
+{id:"DEMO-105",model:"Multifunction E",place:"Sample Branch North",last:"1 day ago",status:"Recovered"},
+{id:"DEMO-106",model:"Printer F",place:"Sample Branch East",last:"11 days ago",status:"Stopped"}
+];
+const tabs=document.querySelectorAll("[data-tab]"),panels=document.querySelectorAll(".panel");
+tabs.forEach(b=>b.addEventListener("click",()=>{tabs.forEach(x=>x.classList.toggle("active",x===b));panels.forEach(p=>p.classList.toggle("active",p.id===b.dataset.tab))}));
+const q=document.querySelector("#q"),rows=document.querySelector("#rows"),empty=document.querySelector("#empty");
+function render(){const term=q.value.trim().toLowerCase();const filtered=records.filter(r=>Object.values(r).some(v=>v.toLowerCase().includes(term)));rows.replaceChildren();for(const r of filtered){const tr=document.createElement("tr");for(const val of [r.id,r.model,r.place,r.last]){const td=document.createElement("td");td.textContent=val;tr.append(td)}const td=document.createElement("td"),span=document.createElement("span");span.className="status "+(r.status==="Collecting"?"ok":r.status==="Recovered"?"warn":"bad");span.textContent=r.status;td.append(span);tr.append(td);rows.append(tr)}empty.hidden=filtered.length>0}q.addEventListener("input",render);render();
+</script></body></html>
