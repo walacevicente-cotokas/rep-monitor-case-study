@@ -5,6 +5,42 @@
 
 > A documented case study of an enterprise monitoring solution. This is **not** the production source repository or a public production demo.
 
+## At a glance
+
+**One enterprise monitoring platform, multiple engineering disciplines.** REP-Monitor brings together a field-oriented Android application, a web operations portal, REST/SOAP integration, data reconciliation and cloud-supported services.
+
+| Product | Engineering focus | Evidence |
+| --- | --- | --- |
+| **Android (Flutter)** | Field UX, status diagnosis, search, geolocation, map clustering and revalidation | [Features](docs/product-features.md) |
+| **Web (Next.js)** | Operational dashboards, reports, inventory review and access management | [Features](docs/product-features.md) |
+| **Backend & data** | FastAPI, PostgreSQL, ERP/telemetry reconciliation and history | [Architecture](docs/architecture.md) |
+| **Cloud & operations** | Cloud Run, connectivity troubleshooting and Windows/PowerShell automation | [Decisions](docs/engineering-decisions.md) |
+
+**[▶ Explore the interactive synthetic demo](https://walacevicente-cotokas.github.io/rep-monitor-case-study/demo/)** · **[Engineering decisions](docs/engineering-decisions.md)** · **[Sanitized code samples](examples/)**
+
+### A look at the product
+
+![REP-Monitor Web Dashboard — sanitized conceptual mockup](assets/screenshots/web-dashboard.png)
+
+<p align="center">
+  <img src="assets/screenshots/android-home.png" width="255" alt="Android application, sanitized visual mockup" />
+  &nbsp;&nbsp;&nbsp;
+  <img src="assets/screenshots/ios-concept.png" width="255" alt="iOS concept mockup, not a shipped application" />
+</p>
+
+<p align="center"><sub><strong>Android visual mockup</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>iOS proposed concept — not released</strong></sub></p>
+
+> **Visual disclosure:** Images are AI-assisted presentation mockups with fictional data, not production screenshots. The Android MVP and web portal are documented; the iOS image illustrates a potential adaptation only.
+
+### What this case demonstrates
+
+- **End-to-end engineering:** connecting mobile, web, API and relational-data workflows around an operational need.
+- **System integration:** reconciling inconsistencies across ERP exports and third-party monitoring data.
+- **Technical judgment:** balancing map usability and performance, status history, account security and controlled imports.
+- **Operations experience:** troubleshooting deployments, networking, scheduled processing and real-world field feedback.
+
+**My involvement:** hands-on technical contribution across app/web development, integrations, testing, SQL, operations and documentation. This is a collaborative, company-context project; the public materials do not claim exclusive ownership of production code. [Read the contribution scope](docs/contribution-and-evidence.md).
+
 ## The problem
 
 Field technicians and supervisors needed a faster way to locate printing devices, identify stale telemetry, reconcile ERP inventories with monitoring data, and initiate diagnosis from a mobile-friendly interface. Disconnected systems and inconsistent equipment identifiers made the workflow difficult.
@@ -32,35 +68,6 @@ flowchart TB
 ```
 
 *Illustrative architecture, deliberately omitting internal network details, hosts and credentials.*
-
-## Product interfaces — sanitized visual walkthrough
-
-The images below are **sanitized, AI-assisted visual mockups** inspired by the product's interface and information architecture. Metrics, identifiers and geography are fictional; these are not production screenshots. The iOS image is a **design concept only**, not evidence of a tested or released iOS application.
-
-
-### Web Dashboard
-
-![REP-Monitor Web Dashboard](assets/screenshots/web-dashboard.png)
-
-### Android Application
-
-<p align="center">
-  <img src="assets/screenshots/android-home.png"
-       width="340"
-       alt="REP-Monitor Android - Demo">
-</p>
-
-### iOS — Concept Preview
-
-<p align="center">
-  <img src="assets/screenshots/ios-concept.png"
-       width="340"
-       alt="REP-Monitor iOS - Visual Concept">
-</p>
-
-> **Portfolio mockups:** All images use fictional data. The iOS interface is a visual proposal, not a released app.
-
-[Explore the interactive portfolio demonstration →](https://walacevicente-cotokas.github.io/rep-monitor-case-study/demo/)
 
 ## What was built
 
