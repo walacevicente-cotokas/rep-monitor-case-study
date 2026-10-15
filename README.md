@@ -37,23 +37,28 @@ flowchart TB
 
 The images below are **independently authored vector mockups** inspired by the product's information architecture. They show entirely invented metrics, identifiers and abstract geography. These are not production screenshots.
 
-### Web operations portal
 
-![Sanitized REP-Monitor web dashboard](assets/screenshots/web-dashboard.svg)
+### Web Dashboard
 
-Dashboard concepts: collection-health indicators, operational map and recent revalidation.
+![REP-Monitor Web Dashboard](assets/screenshots/web-dashboard.png)
 
-### Android field application
+### Android Application
 
-<p align="center"><img src="assets/screenshots/android-home.svg" width="320" alt="Illustrative REP-Monitor Android screen with fictional equipment metrics" /></p>
+<p align="center">
+  <img src="assets/screenshots/android-home.png"
+       width="340"
+       alt="REP-Monitor Android - Demo">
+</p>
 
-Field-first interface focused on priority alerts, device lookup, mapping and revalidation.
+### iOS — Concept Preview
 
-### iOS — proposed adaptation, not released
+<p align="center">
+  <img src="assets/screenshots/ios-concept.png"
+       width="340"
+       alt="REP-Monitor iOS - Visual Concept">
+</p>
 
-<p align="center"><img src="assets/screenshots/ios-concept.svg" width="320" alt="Conceptual and unreleased iOS interface mockup using synthetic data" /></p>
-
-**iOS is a visual concept only:** this portfolio does not imply a shipped, tested or App Store-published iOS product.
+> All screenshots use fictional data.
 
 [Explore the interactive portfolio demonstration →](https://walacevicente-cotokas.github.io/rep-monitor-case-study/demo/)
 
