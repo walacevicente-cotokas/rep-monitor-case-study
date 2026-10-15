@@ -1,7 +1,7 @@
 # REP-Monitor — Enterprise Fleet Monitoring
 ### Software Engineering · Mobile & Web · APIs · Data Engineering · Cloud Operations
 
-**[Português](README.pt-BR.md) | [Interactive demo source](demo/index.html) | [Architecture](docs/architecture.md) | [Engineering decisions](docs/engineering-decisions.md) | [Sanitized code](examples/) | [Author's profile](https://github.com/walacevicente-cotokas)**
+**[🌐 Live interactive demo](https://walacevicente-cotokas.github.io/rep-monitor-case-study/demo/) | [Português](README.pt-BR.md) | [Demo source](demo/index.html) | [Architecture](docs/architecture.md) | [Engineering decisions](docs/engineering-decisions.md) | [Sanitized code](examples/) | [Author's profile](https://github.com/walacevicente-cotokas)**
 
 > A documented case study of an enterprise monitoring solution. This is **not** the production source repository or a public production demo.
 
@@ -55,7 +55,7 @@ Read the [technical decision log](docs/engineering-decisions.md).
 
 ## Interactive portfolio prototype
 
-Explore the [standalone synthetic demo](demo/index.html) (open locally, or host via GitHub Pages after enabling it in repository settings). It includes fictional KPIs, local equipment search, an abstract marker visualization and field workflow explanation. **It is not a real application environment**. See the [demo guide](demo/README.md) and [recruiter visibility checklist](docs/recruiter-visibility.md).
+Explore the [interactive synthetic demo on GitHub Pages](https://walacevicente-cotokas.github.io/rep-monitor-case-study/demo/) ([source code](demo/index.html)). It includes fictional KPIs, local equipment search, an abstract marker visualization and field workflow explanation. **It is not a real application environment**. See the [demo guide](demo/README.md) and [recruiter visibility checklist](docs/recruiter-visibility.md).
 
 ## Demonstration and source code
 
